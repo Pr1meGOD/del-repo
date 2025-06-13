@@ -658,13 +658,14 @@
             const cursor = { x: e.clientX, y: e.clientY };
             const elements = document.querySelectorAll('.floating-element');
             
-            elements.forEach((element, index) => {
-                const speed = (index + 1) * 0.01;
-                const x = (cursor.x * speed);
-                const y = (cursor.y * speed);
-                
-                element.style.transform = translate(${x}px, ${y}px);
-            });
+           elements.forEach((element, index) => {
+    const speed = (index + 1) * 0.01;
+    const x = (cursor.x * speed);
+    const y = (cursor.y * speed);
+    
+    element.style.transform = `translate(${x}px, ${y}px)`;
+});
+
         });
     </script>
 </body>
